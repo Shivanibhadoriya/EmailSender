@@ -1,13 +1,14 @@
+using JobMailerApi.Services;
 using OfficeOpenXml;
-using System.ComponentModel;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<JobMailerService>();
 
-builder.Services.AddCors(options =>
+builder.Services.AddCors(options =>     
 {
     options.AddPolicy("AllowReactApp", policy =>
     {
