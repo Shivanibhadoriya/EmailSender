@@ -1,18 +1,21 @@
 # Build output
 bin/
 obj/
+publish/
 
-# Visual Studio / user-specific files
+# Visual Studio
 .vs/
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
 
-# Local configuration and secrets
-appsettings.json
-appsettings.Development.json
-appsettings.*.local.json
+# Rider / VS Code
+.idea/
+.vscode/
+
+# NuGet
+*.nupkg
 
 # Logs
 logs/
@@ -21,3 +24,10 @@ logs/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Local configuration
+appsettings.Development.json
+appsettings.*.local.json
+
+# Do NOT ignore appsettings.json if your app needs it in production.
+# Instead, remove passwords/API keys from it and use environment variables.
