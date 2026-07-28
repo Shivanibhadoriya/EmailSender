@@ -21,11 +21,9 @@ var app = builder.Build();
 
 ExcelPackage.License.SetNonCommercialPersonal("Shivani");
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 app.UseCors("AllowReactApp");
