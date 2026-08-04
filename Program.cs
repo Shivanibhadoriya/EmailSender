@@ -7,6 +7,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<JobMailerService>();
+builder.Services.AddScoped<ExcelCompanyService>();
+builder.Services.AddScoped<BulkEmailService>();
+builder.Services.AddScoped<EmailAttemptLogService>();
+builder.Services.AddScoped<BounceProcessingService>();
 
 builder.Services.AddCors(options =>     
 {
@@ -31,7 +35,7 @@ app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 app.UseCors("AllowReactApp");
-app.UseAuthorization();
+app.UseAuthorization(); 
 app.MapControllers();
 
 app.Run();
